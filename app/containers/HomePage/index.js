@@ -22,6 +22,7 @@ import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
+import { DatePicker } from 'antd';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -75,6 +76,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
                 />
+                <DatePicker />
               </label>
             </Form>
             <ReposList {...reposListProps} />
